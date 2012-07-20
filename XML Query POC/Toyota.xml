@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Toyota>
+	<Car vin="1">
+		<Model>Tundra</Model>
+		<Color>Red</Color>
+		<Engine>V6</Engine>			
+	</Car>	
+	<Car vin="2">
+		<Model>Camry</Model>
+		<Color>Red</Color>
+		<Engine>V4</Engine>			
+	</Car>
+	<Car vin="3">
+		<Model>Prius</Model>
+		<Color>White</Color>
+		<Engine>Hybrid</Engine>			
+	</Car>
+	<Car vin="4">
+		<Model>Tundra</Model>
+		<Color>Black</Color>
+		<Engine>V6</Engine>			
+	</Car>
+</Toyota>

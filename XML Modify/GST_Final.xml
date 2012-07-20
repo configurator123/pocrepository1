@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model year="2012" name="Venza">
+  <features>
+    <trim>
+      <engine pick="1" derived="true">
+        <feature code="Hybrid" alias="Electric" conflicts="19W SingleExhaust 20W DoubleExhaust" />
+        <feature code="V12" alias="5.0L V10" conflicts="19W SingleExhaust" />
+        <feature code="JetEngine" alias="Twin Rockets" conflicts="Everything" />
+        <feature code="V6" alias="10L V6" conflicts="DoubleExhaust" />
+      </engine>
+      <drive pick="1" derived="true">
+        <feature code="2WD" alias="FWD" />
+        <feature code="4WD" alias="AWD" />
+      </drive>
+      <grade pick="1" derived="true">
+        <feature code="LE" conflicts="LTD XLE" name="LE" />
+        <feature code="LTD" conflicts="LE XLE" includes="Chrome NV SR" name="LTD" />
+        <feature code="XLE" conflicts="LTD LE" includes="Chrome" name="XLE" />
+      </grade>
+      <transmission pick="1" derived="true">
+        <feature code="6AT" alias="6-Speed Auto" />
+      </transmission>
+      <modelCode pick="1">
+        <feature code="2810" iffs="L4 2WD 6AT 19W LE" name="LE 4-Cyl 2WD" />
+        <feature code="2812" iffs="V6 2WD 6AT 20W LE" name="LE 6-Cyl 2WD" />
+        <feature code="2820" iffs="L4 4WD 6AT 19W LE" name="LE 4-Cyl AWD" />
+        <feature code="2822" iffs="V6 4WD 6AT 20W LE" name="LE 6-Cyl AWD" />
+        <feature code="2842" iffs="V6 6AT 2WD LTD 20W" name="LTD 6-CYL 2WD" />
+        <feature code="2846" iffs="LTD 6AT 4WD V6 20W" name="LTD 6-CYL 4WD" />
+        <feature code="2830" iffs="L4 6AT 2WD XLE 19W" name="XLE 4-CYL 2WD" />
+        <feature code="2832" iffs="6AT 2WD V6 XLE 20W" name="XLE 6-CYL 2WD" />
+        <feature code="2834" iffs="4WD L4 6AT XLE 19W" name="XLE 4-CYL 4WD" />
+        <feature code="2836" iffs="4WD V6 6AT XLE 20W" name="XLE 6-CYL 4WD" />
+      </modelCode>
+      <wheels pick="1" derived="true">
+        <feature code="19W" iffs="L4" conflicts="V6 DualExhaust" />
+        <feature code="20W" iffs="V6" conflicts="L4 SingleExhaust" />
+      </wheels>
+      <exhaust pick="1" derived="true">
+        <feature code="SingleExhaust" iffs="L4" conflicts="V6 20W" />
+        <feature code="DualExhaust" iffs="V6" conflicts="L4 19W" />
+      </exhaust>
+    </trim>
+    <color>
+      <exterior pick="1">
+        <feature code="202" name="Black" />
+        <feature code="1F7" conflicts="01" name="Classic Silver Metallic" />
+        <feature code="8U6" name="Tropical Sea Metallic" />
+        <feature code="070" name="Blizzard Pearl" />
+        <feature code="776" name="Aloe Green Metallic" />
+      </exterior>
+      <interior pick="1" derived="true">
+        <feature code="FA01" iffs="Fabric 01" />
+        <feature code="FA12" iffs="Fabric 12" />
+        <feature code="LA01" iffs="Leather 01" />
+        <feature code="LA12" iffs="Leather 12" />
+      </interior>
+      <iColor pick="1">
+        <feature code="01" name="Ivory" />
+        <feature code="12" name="Gray" />
+      </iColor>
+      <iFabric pick="1">
+        <feature code="Fabric" conflicts="LTD XLE" />
+        <feature code="Leather" includes="" />
+      </iFabric>
+    </color>
+    <options>
+      <!--<feature code="FE" name="50 state emissions"/>-->
+      <feature code="Chrome" name="Chrome Door Handles" derived="true" />
+      <feature code="SR" includes="LTD" name="Panoramic Sun Roof" derived="true" />
+      <feature code="SK" name="Smart Key" derived="true" />
+      <!--feature code="HS" name="Lighting Package"/>-->
+      <!--feature code="LA" includes="Leather" name="Leather Package"/>-->
+      <feature code="EJ" name="JBL" derived="true" />
+      <feature code="NV" includes="EJ" name="Nav System" derived="true" />
+      <!--feature code="SA" name="Security Package"/>-->
+      <feature code="SH" name="Heated Seats" derived="true" />
+      <feature code="CQ" includes="SK" conflicts="" name="Convenience Package" />
+      <!--feature code="LP" includes="SK HS LA SA" conflicts="CQ LS LX" name="Premium Package 1"/>-->
+      <!--feature code="LX" includes="SK HS LA SA SH" conflicts="CQ LP LS" name="Premium Package 2"/>-->
+      <!--feature code="LS" includes="LA SH" conflicts="LP LX" name="Comfort Package"/>-->
+      <feature code="EY" includes="EJ" conflicts="SR" name="Rear Seat Entertainment System" derived="true" />
+      <feature code="LT" conflicts="LE XLE" name="LTD Package" />
+      <feature code="XL" conflicts="LE LTD" includes="SK" name="XLE Package" />
+      <feature code="PT" conflicts="XLE LTD" name=" LE Preferred Package" />
+      <feature code="PM" conflicts="LE LTD" includes="SR EJ SH" name="XLE Premium Package" />
+      <feature code="TO" name="Tow Prep Package" />
+      <feature code="XLEnav" includes="NV" conflicts="LE" name="XLE Nav Package" />
+    </options>
+    <accessories>
+      <feature code="3T" conflicts="SR" name="Roof Rack" />
+      <feature code="DI01" includes="3T" name="Bike Rack" />
+      <feature code="DI02" includes="3T" name="Ski Rack" />
+      <feature code="BM" name="Molding" />
+      <!--<feature code="WL" name="Wheel locks (alloy)"/>-->
+      <feature code="TH" name="Tow Hitch" />
+      <feature code="EF" name="Rear bumper protector" />
+      <feature code="2Q" name="All weather mats" />
+    </accessories>
+  </features>
+</model>

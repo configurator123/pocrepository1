@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	
+	The current capabilities are to Add, Remove, and Edit features in the
+	TMS Feature Model XML file. To Add/Remove a feature, place the feature node
+	in the original XML within the appropriate tags. See Below for example.
+	The Add/Remove/Edit tags need to exist within the exact same heirarchical 
+	structure of the original TMS xml file.
+
+-->
+
+<model year="2012" name="Venza">
+  <features>
+    <trim>	
+	
+      <engine>		
+		<!--Elements to add-->
+		<add>
+			<feature code="Hybrid" alias="Electric" conflicts="19W SingleExhaust 20W DoubleExhaust" />
+			<feature code="V12" alias="5.0L V10" conflicts="19W SingleExhaust" />
+			<feature code="JetEngine" alias="Twin Rockets" conflicts="Everything" />
+		</add>
+		
+		<!--Elements to remove-->
+		<remove>
+			<feature code="L4" />
+		</remove>
+		
+		
+		<!--Elements to edit-->	
+		<edit>
+			<feature code="V6" alias="10L V6" conflicts="DoubleExhaust" />
+		</edit>	
+			
+		
+	  </engine>	  
+	</trim>
+	
+	<color>	
+		<exterior>
+		
+			<!--Elements to remove-->
+			<remove>
+				<feature code="3R3" name="Barcelona Red Metallic" />
+				<feature code="1G3" name="Magnetic Gray Metallic" />
+				<feature code="4U2" conflicts="12" name="Golden Umber Mica" />
+				<feature code="4U3" conflicts="12" name="Sunset Bronze Mica" />
+			</remove>
+			
+		</exterior>		
+	</color>
+	
+	
+	</features>
+</model>
